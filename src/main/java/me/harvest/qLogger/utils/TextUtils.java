@@ -13,12 +13,12 @@ public class TextUtils {
                 "⣿⡇⠄⠄⢀⣞⣡⠴⠚⠁⠄⠄⢀⠠⠄⠄⠄⠄⠄⠄⠄⠉⠄⠄⠄⠄⠄⠄⠄⠄\n" +
                 "⣿⡇⠄⡴⠁⡜⣵⢗⢀⠄⢠⡔⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n" +
                 "⣿⡇⡜⠄⡜⠄⠄⠄⠉⣠⠋⠠⠄⢀⡄⠄⠄⣠⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸\n" +
-                "⣿⠸⠄⡼⠄⠄⠄⠄⢰⠁⠄⠄⠄⠈⣀⣠⣬⣭⣛⠄⠁⠄⡄⠄⠄⠄⠄⠄⢀⣿",122, 122, 122).append(TextComponentComposer("Minecraft ver. > ", 186, 220, 88).append(TextComponentComposer(Bukkit.getMinecraftVersion() + "\n", 255, 255, 255)))
+                "⣿⠸⠄⡼⠄⠄⠄⠄⢰⠁⠄⠄⠄⠈⣀⣠⣬⣭⣛⠄⠁⠄⡄⠄⠄⠄⠄⠄⢀⣿ ",122, 122, 122).append(TextComponentComposer("Minecraft ver. > ", 46, 204, 113).append(TextComponentComposer(Bukkit.getMinecraftVersion() + "\n", 255, 255, 255)))
                 .append(TextComponentComposer("⣏⠄⢀⠁⠄⠄⠄⠄⠇⢀⣠⣴⣶⣿⣿⣿⣿⣿⣿⡇⠄⠄⡇⠄⠄⠄⠄⢀⣾⣿ ", 122, 122, 122).append(TextComponentComposer("Bukkit ver. > ", 255, 121,121)).append(TextComponentComposer(Bukkit.getBukkitVersion() + "\n", 255, 255, 255)))
                 .append(TextComponentComposer("⣿⣸⠈⠄⠄⠰⠾⠴⢾⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⢁⣾⢀⠁⠄⠄⠄⢠⢸⣿⣿ ", 122, 122, 122)).append(TextComponentComposer("OS > ", 104, 109, 224)).append(TextComponentComposer(System.getProperty("os.name") + "\n", 255, 255, 255))
                 .append(TextComponentComposer("⣿⣿⣆⠄⠆⠄⣦⣶⣦⣌⣿⣿⣿⣿⣷⣋⣀⣈⠙⠛⡛⠌⠄⠄⠄⠄⢸⢸⣿⣿ ", 122, 122, 122).append(TextComponentComposer("Ip/Port info > ", 255, 190, 118)).append(TextComponentComposer(Bukkit.getIp() + Bukkit.getPort() + "\n", 255, 255,255)))
-                .append(TextComponentComposer("⣿⣿⣿⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠈⠄⠄⠄⠄⠄⠈⢸⣿⣿\n" +
-                        "⣿⣿⣿⠄⠄⠄⠘⣿⣿⣿⡆⢀⣈⣉⢉⣿⣿⣯⣄⡄⠄⠄⠄⠄⠄⠄⠄⠈⣿⣿\n" +
+                .append(TextComponentComposer("⣿⣿⣿⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠈⠄⠄⠄⠄⠄⠈⢸⣿⣿ ", 122, 122, 122).append(TextComponentComposer("Java ver. > ", 230, 126, 34)).append(TextComponentComposer(System.getProperty("java.version") + "\n", 255, 255, 255)))
+                .append(TextComponentComposer("⣿⣿⣿⠄⠄⠄⠘⣿⣿⣿⡆⢀⣈⣉⢉⣿⣿⣯⣄⡄⠄⠄⠄⠄⠄⠄⠄⠈⣿⣿\n" +
                         "⣿⣿⡟⡜⠄⠄⠄⠄⠙⠿⣿⣧⣽⣍⣾⣿⠿⠛⠁⠄⠄⠄⠄⠄⠄⠄⠄⠃⢿⣿\n" +
                         "⣿⡿⠰⠄⠄⠄⠄⠄⠄⠄⠄⠈⠉⠩⠔⠒⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⠘⣿\n" +
                         "⣿⠃⠃⠄⠄⠄⠄⠄⠄⣀⢀⠄⠄⡀⡀⢀⣤⣴⣤⣤⣀⣀⠄⠄⠄⠄⠄⠄⠁⢹", 122, 122, 122))
