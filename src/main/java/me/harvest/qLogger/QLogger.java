@@ -1,5 +1,6 @@
 package me.harvest.qLogger;
 
+import me.harvest.qLogger.utils.TextUtils;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class QLogger extends JavaPlugin {
@@ -9,6 +10,8 @@ public final class QLogger extends JavaPlugin {
     public void onEnable() {
         QLogger.instance = this;
         saveDefaultConfig();
+
+        TextUtils.startupWelcome();
 
     }
 
