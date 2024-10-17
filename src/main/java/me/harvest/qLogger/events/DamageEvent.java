@@ -8,11 +8,12 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 
 public class DamageEvent implements Listener {
 
-    private final int[] color = {155, 89, 182};
-    private final String prefix = QLogger.getInstance().getConfig().getString("damage_log.log_prefix");
+    private final int[] color_damage = {155, 89, 182};
+    private final String prefix_damage = QLogger.getInstance().getConfig().getString("damage_log.log_prefix");
 
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
@@ -22,7 +23,7 @@ public class DamageEvent implements Listener {
 
                 String generated_message = String.format("%s damaged by %s | damage: %f", player.getName(), event.getDamager().getName(), event.getDamage());
 
-                TextUtils.LogSend(prefix, generated_message, color[0], color[1], color[2]);
+                TextUtils.LogSend(prefix_damage, generated_message, color_damage[0], color_damage[1], color_damage[2]);
             }
         }
         else if (QLogger.getInstance().getConfig().getBoolean("damage_log.damage_by_player_log")) {
@@ -31,8 +32,10 @@ public class DamageEvent implements Listener {
 
                 String generated_message = String.format("%s damaged by %s | damage: %f", player.getName(), event.getDamager().getName(), event.getDamage());
 
-                TextUtils.LogSend(prefix, generated_message, color[0], color[1], color[2]);
+                TextUtils.LogSend(prefix_damage, generated_message, color_damage[0], color_damage[1], color_damage[2]);
             }
         }
     }
+
+
 }

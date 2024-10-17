@@ -1,0 +1,8 @@
+damage_log:
+  log_prefix: "[DAMAGE]"
+  damage_by_entity_log: true
+  damage_by_player_log: true
+
+death_log:
+  log_prefix: "[DEATH]"
+  death_log: true
