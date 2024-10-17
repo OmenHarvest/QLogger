@@ -30,4 +30,8 @@ public class TextUtils {
         return Component.text(text).color(TextColor.color(r, g, b));
     }
 
+    public static void LogSend(String prefix, String message, int r, int g, int b) {
+        Bukkit.getConsoleSender().sendMessage(TextComponentComposer(prefix + " ", r, g, b).append(TextComponentComposer(message, 255, 255, 255)));
+    }
+
 }
