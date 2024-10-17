@@ -1,0 +1,4 @@
+name: QLogger
+version: '1.0'
+main: me.harvest.qLogger.QLogger
+api-version: '1.21'
