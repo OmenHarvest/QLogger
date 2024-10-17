@@ -2,7 +2,22 @@ damage_log:
   log_prefix: "[DAMAGE]"
   damage_by_entity_log: true
   damage_by_player_log: true
+  telegram_log: true
 
 death_log:
   log_prefix: "[DEATH]"
   death_log: true
+  coords_log: true
+  telegram_log: true
+
+chat_log:
+  log_prefix: "[CHAT]"
+  chat_log: true
+  command_log: true
+  telegram_log: false
+  telegram_command_log: false
+
+join_leave_log:
+  log_prefix: "[JOIN/LEAVE]"
+  join_leave_log: true
+  telegram_log: true

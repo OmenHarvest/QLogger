@@ -1,8 +1,15 @@
 package me.harvest.qLogger.utils;
 
+import me.harvest.qLogger.QLogger;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
+import org.bukkit.scheduler.BukkitRunnable;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class TextUtils {
 
@@ -32,6 +39,15 @@ public class TextUtils {
 
     public static void LogSend(String prefix, String message, int r, int g, int b) {
         Bukkit.getConsoleSender().sendMessage(TextComponentComposer(prefix + " ", r, g, b).append(TextComponentComposer(message, 255, 255, 255)));
+    }
+
+    public static void TimerControl(){
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                Bukkit.getConsoleSender().sendMessage(TextComponentComposer(String.format("---------------[%s | %s]---------------", LocalDate.now(), LocalTime.now()),217, 128, 250));
+            }
+        }.runTaskTimer(QLogger.getInstance(), 20, 3600);
     }
 
 }

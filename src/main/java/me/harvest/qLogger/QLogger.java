@@ -1,5 +1,6 @@
 package me.harvest.qLogger;
 
+import me.harvest.qLogger.events.ChatAsyncEvent;
 import me.harvest.qLogger.events.DamageEvent;
 import me.harvest.qLogger.events.DeathEvent;
 import me.harvest.qLogger.logger.LogManager;
@@ -22,6 +23,7 @@ public final class QLogger extends JavaPlugin {
 
         loadEvents();
         TextUtils.startupWelcome();
+        TextUtils.TimerControl();
 
     }
 
@@ -36,6 +38,7 @@ public final class QLogger extends JavaPlugin {
     private void loadEvents(){
         instance.getServer().getPluginManager().registerEvents(new DamageEvent(), this);
         instance.getServer().getPluginManager().registerEvents(new DeathEvent(), this);
+        instance.getServer().getPluginManager().registerEvents(new ChatAsyncEvent(), this);
     }
 
     @Override
