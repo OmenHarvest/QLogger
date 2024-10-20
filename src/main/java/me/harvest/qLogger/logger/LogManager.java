@@ -19,18 +19,15 @@ public class LogManager {
     );
 
     public void pullGeneratedMessage(LogType logType, String message, Plugin plugin) {
-        try {
-
+        if(QLogger.getInstance().getConfig().getBoolean("telegram_module")){
             int[] rgb = logType.getColorRGBContainer();
 
             TextUtils.LogSend(logType.getPrefix(), message, rgb[0], rgb[1], rgb[2]);
-            if(QLogger.getInstance().getConfig().getBoolean("telegram_module") && QLogger.getInstance().getConfig().getBoolean(configMap.get(logType))) {
-                QLogger.getInstance().getTelegram().pullMessage(String.format("%s %s", logType.getPrefix(), message));
-            }
+            QLogger.getInstance().getTelegram().pullMessage(String.format("%s %s", logType.getPrefix(), message));
         }
-        catch (Exception e) {
-            int[] rgb = LogType.ERROR.getColorRGBContainer();
-            TextUtils.LogSend(LogType.ERROR.getPrefix(), message, rgb[0], rgb[1], rgb[2]);
+        else{
+            int[] rgb = logType.getColorRGBContainer();
+            TextUtils.LogSend(logType.getPrefix(), message, rgb[0], rgb[1], rgb[2]);
         }
 
     }
