@@ -54,7 +54,7 @@ public class TelegramSenderModule {
 
     private void sendContainer() {
 
-        StringBuilder stringBuilder = new StringBuilder(String.format("<b>[%s | %s]</b>\n\n", LocalDate.now(), LocalTime.now()));
+        StringBuilder stringBuilder = new StringBuilder(String.format("<b>[%s | %s]</b>\n\n", LocalDate.now(), LocalTime.now().withNano(0)));
 
         for(String log : telegramMessagesContainer){
             stringBuilder.append(log).append("\n");

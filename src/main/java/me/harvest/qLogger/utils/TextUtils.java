@@ -45,7 +45,7 @@ public class TextUtils {
         new BukkitRunnable() {
             @Override
             public void run() {
-                Bukkit.getConsoleSender().sendMessage(TextComponentComposer(String.format("---------------[%s | %s]---------------", LocalDate.now(), LocalTime.now()),217, 128, 250));
+                Bukkit.getConsoleSender().sendMessage(TextComponentComposer(String.format("---------------[%s | %s]---------------", LocalDate.now(), LocalTime.now().withNano(0)),217, 128, 250));
             }
         }.runTaskTimer(QLogger.getInstance(), 20, 3600);
     }

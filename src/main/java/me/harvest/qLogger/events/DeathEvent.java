@@ -15,7 +15,7 @@ public class DeathEvent implements Listener {
     public void onDeath(PlayerDeathEvent event){
         if(QLogger.getInstance().getConfig().getBoolean("damage_log.damage_by_entity_log")){
             String generated_message;
-            if(event.getEntity().getKiller() == null){
+            if(event.getPlayer().getKiller() == null){
                 generated_message = String.format("%s killed by world environment. | %f %f %f", event.getEntity().getName(), event.getPlayer().getLocation().getX(), event.getPlayer().getLocation().getY(), event.getPlayer().getLocation().getZ());
             }
             else {
@@ -24,4 +24,5 @@ public class DeathEvent implements Listener {
             QLogger.getInstance().getLogManager().pullGeneratedMessage(logType, generated_message, QLogger.getInstance());
         }
     }
+
 }
