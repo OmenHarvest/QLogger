@@ -4,6 +4,7 @@ import me.harvest.qLogger.QLogger;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
+import org.bukkit.command.CommandSender;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.time.LocalDate;
@@ -39,6 +40,10 @@ public class TextUtils {
 
     public static void LogSend(String prefix, String message, int r, int g, int b) {
         Bukkit.getConsoleSender().sendMessage(TextComponentComposer(prefix + " ", r, g, b).append(TextComponentComposer(message, 255, 255, 255)));
+    }
+
+    public static void MessageSend(CommandSender target, String prefix, String message, int r, int g, int b) {
+        target.sendMessage(TextComponentComposer(prefix + " ", r, g, b).append(TextComponentComposer(message, 255, 255, 255)));
     }
 
     public static void TimerControl(){
