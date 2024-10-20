@@ -3,6 +3,7 @@ package me.harvest.qLogger.utils;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.request.InputMessageContent;
+import com.pengrad.telegrambot.model.request.ParseMode;
 import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.response.SendResponse;
 import me.harvest.qLogger.QLogger;
@@ -53,13 +54,14 @@ public class TelegramSenderModule {
 
     private void sendContainer() {
 
-        StringBuilder stringBuilder = new StringBuilder(String.format("---------------[%s | %s]---------------\n", LocalDate.now(), LocalTime.now()));
+        StringBuilder stringBuilder = new StringBuilder(String.format("<b>[%s | %s]</b>\n\n", LocalDate.now(), LocalTime.now()));
 
         for(String log : telegramMessagesContainer){
             stringBuilder.append(log).append("\n");
         }
 
         SendMessage sendMessage = new SendMessage(channelId, stringBuilder.toString()); // Создаем сообщение для отправки
+        sendMessage.parseMode(ParseMode.HTML);
         SendResponse response = telegramBot.execute(sendMessage); // Отправляем сообщение
 
 
