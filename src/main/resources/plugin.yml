@@ -1,5 +1,5 @@
 name: QLogger
-version: '0.1-beta'
+version: '0.1c-beta'
 main: me.harvest.qLogger.QLogger
 api-version: '1.21'
 

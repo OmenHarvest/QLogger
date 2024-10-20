@@ -44,6 +44,7 @@ public final class QLogger extends JavaPlugin {
         instance.getServer().getPluginManager().registerEvents(new ChatAsyncEvent(), this);
         instance.getServer().getPluginManager().registerEvents(new JoinLeaveEvent(), this);
         instance.getServer().getPluginManager().registerEvents(new ChangeWorldEvent(), this);
+        instance.getServer().getPluginManager().registerEvents(new TeleportEvent(), this);
     }
 
     private void regCommands(){

@@ -25,6 +25,12 @@ changed_world_log:
   changed_world_log: true
   telegram_log: true
 
+teleport_log:
+  log_prefix: "[TELEPORT]"
+  teleport_log: true
+  telegram_log: true
+
 telegram_module: false
 telegram_key: "TOKEN_HERE"
 telegram_channel_id: "ID_HERE"
+

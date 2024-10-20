@@ -15,7 +15,8 @@ public class LogManager {
             LogType.CHANGEWORLD, "changed_world_log.telegram_log",
             LogType.CHAT, "chat_log.telegram_log",
             LogType.DAMAGE, "damage_log.telegram_log",
-            LogType.JOINLEAVE, "join_leave_log.telegram_log"
+            LogType.JOINLEAVE, "join_leave_log.telegram_log",
+            LogType.TELEPORT, "teleport_log.telegram_log"
     );
 
     public void pullGeneratedMessage(LogType logType, String message, Plugin plugin) {
@@ -36,14 +37,14 @@ public class LogManager {
     }
 
     @Description("For future api!!!")
-    public void pullGeneratedMessageAPI(LogType logType, String message, boolean sendToTelegram, Plugin plugin) {
+    public void pullGeneratedMessageAPI(String prefix, String message, boolean sendToTelegram, Plugin plugin, int[] rgbContainer) {
         try {
 
-            int[] rgb = logType.getColorRGBContainer();
+            int[] rgb = rgbContainer;
 
-            TextUtils.LogSend(logType.getPrefix(), message, rgb[0], rgb[1], rgb[2]);
+            TextUtils.LogSend(prefix, message, rgb[0], rgb[1], rgb[2]);
             if(QLogger.getInstance().getConfig().getBoolean("telegram_module") && sendToTelegram){
-                QLogger.getInstance().getTelegram().pullMessage(String.format("%s %s", logType.getPrefix(), message));
+                QLogger.getInstance().getTelegram().pullMessage(String.format("%s %s", prefix, message));
             }
         }
         catch (Exception e) {
