@@ -23,13 +23,4 @@ public class ChatAsyncEvent implements Listener {
             QLogger.getInstance().getLogManager().pullGeneratedMessage(logType, generated_message, QLogger.getInstance());
         }
     }
-
-    @EventHandler
-    public void onPlayerChat(PlayerCommandSendEvent e) {
-        if(QLogger.getInstance().getConfig().getBoolean("chat_log.command_log")){
-            String generated_message = String.format("%s send message: %s", e.getPlayer().getName(), "placholder");
-
-            QLogger.getInstance().getLogManager().pullGeneratedMessage(logType, generated_message, QLogger.getInstance());
-        }
-    }
 }

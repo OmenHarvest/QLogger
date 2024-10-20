@@ -13,9 +13,7 @@ death_log:
 chat_log:
   log_prefix: "[CHAT]"
   chat_log: true
-  command_log: true
   telegram_log: false
-  telegram_command_log: false
 
 join_leave_log:
   log_prefix: "[JOIN/LEAVE]"
