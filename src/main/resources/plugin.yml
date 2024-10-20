@@ -1,4 +1,13 @@
 name: QLogger
-version: '1.0'
+version: '0.1-beta'
 main: me.harvest.qLogger.QLogger
 api-version: '1.21'
+
+commands:
+  QLogger:
+    aliases:
+      - ql
+      - logger
+
+    permission: "QLogger.admin"
+    description: "main command"

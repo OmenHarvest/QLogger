@@ -10,6 +10,7 @@ public enum LogType {
     JOINLEAVE(QLogger.getInstance().getConfig().getString("join_leave_log.log_prefix"), new int[] {253, 167, 223}),
     CHANGEWORLD(QLogger.getInstance().getConfig().getString("changed_world_log.log_prefix"), new int[] {0, 98, 102}),
     CHAT(QLogger.getInstance().getConfig().getString("chat_log.log_prefix"), new int[] {126, 214, 223}),
+    TELEGRAM("[Telegram]", new int[] {6, 82, 221}),
     ERROR(QLogger.getInstance().getConfig().getString("death_log.log_prefix"), new int[]{231, 76, 60});
 
     private final String prefix;

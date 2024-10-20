@@ -24,3 +24,7 @@ changed_world_log:
   log_prefix: "[WORLD CHANGE]"
   changed_world_log: true
   telegram_log: true
+
+telegram_module: true
+telegram_key: "TOKEN_HERE"
+telegram_channel_id: "ID_HERE"

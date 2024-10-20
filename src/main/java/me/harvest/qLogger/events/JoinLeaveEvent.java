@@ -13,7 +13,7 @@ public class JoinLeaveEvent implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
-        if(QLogger.getInstance().getConfig().getBoolean("join_leave_log.log_prefix")){
+        if(QLogger.getInstance().getConfig().getBoolean("join_leave_log.join_leave_log")){
             String generated_message = String.format("%s join on server", event.getPlayer().getName());
 
             QLogger.getInstance().getLogManager().pullGeneratedMessage(logType, generated_message, QLogger.getInstance());
@@ -22,7 +22,7 @@ public class JoinLeaveEvent implements Listener {
 
     @EventHandler
     public void onLeave(PlayerQuitEvent event) {
-        if(QLogger.getInstance().getConfig().getBoolean("join_leave_log.log_prefix")){
+        if(QLogger.getInstance().getConfig().getBoolean("join_leave_log.join_leave_log")){
             String generated_message = String.format("%s join on server", event.getPlayer().getName());
 
             QLogger.getInstance().getLogManager().pullGeneratedMessage(logType, generated_message, QLogger.getInstance());
