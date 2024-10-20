@@ -9,7 +9,7 @@ import java.util.List;
 //class for logging in telegram bot. You can change private policy in config instr. Default = off
 public class TelegramSenderModule {
 
-    private List<String> telegramMessagesContainer = new ArrayList<>();
+    private final List<String> telegramMessagesContainer = new ArrayList<>();
 
     public TelegramSenderModule() {
         new BukkitRunnable() {
@@ -24,6 +24,7 @@ public class TelegramSenderModule {
     }
 
     public void pullMessage(String message) {
+        telegramMessagesContainer.add(message);
         //placeholder
         //Simple logic: in 30-60 sec (1200 ticks)  module pull message to data to share container and send it in time out
 
