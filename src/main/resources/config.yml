@@ -21,3 +21,8 @@ join_leave_log:
   log_prefix: "[JOIN/LEAVE]"
   join_leave_log: true
   telegram_log: true
+
+changed_world_log:
+  log_prefix: "[WORLD CHANGE]"
+  changed_world_log: true
+  telegram_log: true

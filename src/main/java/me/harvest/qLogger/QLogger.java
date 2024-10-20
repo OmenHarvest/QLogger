@@ -1,9 +1,6 @@
 package me.harvest.qLogger;
 
-import me.harvest.qLogger.events.ChatAsyncEvent;
-import me.harvest.qLogger.events.DamageEvent;
-import me.harvest.qLogger.events.DeathEvent;
-import me.harvest.qLogger.events.JoinLeaveEvent;
+import me.harvest.qLogger.events.*;
 import me.harvest.qLogger.logger.LogManager;
 import me.harvest.qLogger.utils.TelegramSenderModule;
 import me.harvest.qLogger.utils.TextUtils;
@@ -41,6 +38,7 @@ public final class QLogger extends JavaPlugin {
         instance.getServer().getPluginManager().registerEvents(new DeathEvent(), this);
         instance.getServer().getPluginManager().registerEvents(new ChatAsyncEvent(), this);
         instance.getServer().getPluginManager().registerEvents(new JoinLeaveEvent(), this);
+        instance.getServer().getPluginManager().registerEvents(new ChangeWorldEvent(), this);
     }
 
     @Override

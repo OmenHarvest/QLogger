@@ -7,7 +7,8 @@ public enum LogType {
     DEATH(QLogger.getInstance().getConfig().getString("death_log.log_prefix"), new int[]{231, 76, 60}),
     DAMAGE(QLogger.getInstance().getConfig().getString("damage_log.log_prefix"), new int[] {155, 89, 182}),
     //WARN() warn logtype
-    JOINLEAVE(QLogger.getInstance().getConfig().getString("chat_log.log_prefix"), new int[] {253, 167, 223}),
+    JOINLEAVE(QLogger.getInstance().getConfig().getString("join_leave_log.log_prefix"), new int[] {253, 167, 223}),
+    CHANGEWORLD(QLogger.getInstance().getConfig().getString("changed_world_log.log_prefix"), new int[] {0, 98, 102}),
     CHAT(QLogger.getInstance().getConfig().getString("chat_log.log_prefix"), new int[] {126, 214, 223}),
     ERROR(QLogger.getInstance().getConfig().getString("death_log.log_prefix"), new int[]{231, 76, 60});
 
