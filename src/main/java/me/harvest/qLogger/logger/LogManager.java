@@ -23,7 +23,10 @@ public class LogManager {
             int[] rgb = logType.getColorRGBContainer();
 
             TextUtils.LogSend(logType.getPrefix(), message, rgb[0], rgb[1], rgb[2]);
-            QLogger.getInstance().getTelegram().pullMessage(String.format("%s %s", logType.getPrefix(), message));
+
+            if(QLogger.getInstance().getConfig().getBoolean(configMap.get(logType))) {
+                QLogger.getInstance().getTelegram().pullMessage(String.format("%s %s", logType.getPrefix(), message));
+            }
         }
         else{
             int[] rgb = logType.getColorRGBContainer();
